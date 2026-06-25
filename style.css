@@ -1,0 +1,727 @@
+/* Custom CSS Reset & Variables representing quiet luxury */
+:root {
+    --bg-primary: #fbfbfa;       /* Warm luxury off-white canvas */
+    --text-main: #1c1c1a;        /* Elegant obsidian charcoal */
+    --text-muted: #6e6e6a;       /* Soft classic slate reading gray */
+    --accent-gold: #c5a880;      /* Muted champagne gold accent */
+    --card-bg: #ffffff;          /* Pure stark white paper blocks */
+    --border-color: #e5e5e0;     /* Ultra-thin hairline divider gray */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+}
+
+/* Header & Nav Positioning */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    margin-left: 2.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+.nav-links .btn-nav {
+    border: 1px solid var(--text-main);
+    padding: 0.6rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.nav-links .btn-nav:hover {
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+}
+
+/* Minimal Typography Hero Layout */
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.hero-actions a {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-right: 1.5rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+    border: 1px solid var(--text-main);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--text-main);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    border-color: var(--text-main);
+}
+
+/* Layout Pricing Sections */
+.pricing-section {
+    padding: 6rem 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-title h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.price-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.price-card:hover {
+    border-color: var(--text-main);
+    transform: translateY(-4px);
+}
+
+.price-card.feature-highlight {
+    border: 1px solid var(--accent-gold);
+}
+
+.price-card.php-card {
+    background-color: #fdfdfd;
+}
+
+.price-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+.price span { font-size: 1.5rem; }
+
+.card-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    min-height: 45px;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 3rem;
+}
+
+.features li {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    padding: 0.6rem 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.btn-card {
+    text-decoration: none;
+    text-align: center;
+    padding: 0.8rem;
+    width: 100%;
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    margin-top: auto;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.btn-card:hover {
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+}
+
+/* About / Quote Layout */
+.about-section {
+    padding: 8rem 4rem;
+    background-color: #1c1c1a;
+    color: #fbfbfa;
+    text-align: center;
+}
+
+.about-container { max-width: 900px; margin: 0 auto; }
+
+.about-section blockquote {
+    font-family: var(--font-serif);
+    font-size: 1.85rem;
+    line-height: 1.5;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.about-section cite {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 2rem;
+    color: var(--accent-gold);
+}
+
+/* Elegant Contact & Form Spaces */
+.contact-section {
+    padding: 6rem 4rem;
+    background-color: var(--card-bg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.direct-lines p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.direct-lines a {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-gold);
+}
+
+.sleek-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.sleek-form label {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.sleek-form input, 
+.sleek-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.sleek-form input:focus, 
+.sleek-form textarea:focus {
+    outline: none;
+    border-color: var(--text-main);
+}
+
+.btn-submit {
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #333330;
+}
+
+.main-footer {
+    text-align: center;
+    padding: 3rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive Structural Breakpoints */
+@media (max-width: 968px) {
+    .main-header { padding: 1.5rem 2rem; flex-direction: column; gap: 1.5rem; }
+    .nav-links a { margin: 0 1rem; }
+    .hero { padding: 2rem; min-height: 60vh; }
+    .hero h1 { font-size: 2.75rem; }
+    .pricing-section, .contact-section { padding: 4rem 2rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+}
+/* ==========================================================================
+   Recent Additions: About Me Section & Transitional Blockquote
+   ========================================================================== */
+
+/* 1. About Me Split Grid */
+.about-section {
+    padding: 8rem 4rem;
+    background-color: #1c1c1a; /* Rich luxury charcoal */
+    color: #fbfbfa;            /* Soft off-white */
+    border-top: 1px solid #2d2d2a;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.about-image-container {
+    position: relative;
+    padding-bottom: 125%; /* High-end vertical rectangle aspect ratio */
+    background-color: #2d2d2a;
+    border: 1px solid rgba(197, 168, 128, 0.2); /* Soft gold accent glow */
+}
+
+.about-image-placeholder {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.about-content .section-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.about-content h2 {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+}
+
+.about-content p {
+    color: #b5b5b0; /* Soft readable gray for dark backgrounds */
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.philosophy-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.philosophy-tags .tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(251, 251, 250, 0.15);
+    padding: 0.5rem 1rem;
+    color: var(--bg-primary);
+}
+
+/* 2. Transitional Blockquote */
+.philosophical-quote-section {
+    padding: 10rem 4rem;
+    background-color: var(--bg-primary); /* Returns to elegant warm off-white */
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.quote-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.decorative-quote {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--accent-gold);
+    opacity: 0.3;
+    margin-bottom: -1.5rem;
+}
+
+.philosophical-quote-section blockquote {
+    font-family: var(--font-serif);
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--text-main);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.philosophical-quote-section cite {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted);
+}
+
+/* Responsive Rules for Both Sections */
+@media (max-width: 968px) {
+    .about-section { padding: 5rem 2rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-image-container { padding-bottom: 100%; }
+    .about-content h2 { font-size: 2.25rem; }
+    .philosophical-quote-section { padding: 6rem 2rem; }
+    .philosophical-quote-section blockquote { font-size: 1.65rem; }
+}
+/* ==========================================================================
+   Upgraded Services Page: Accordion Dropdowns & Packages Cards
+   ========================================================================== */
+
+/* Accordion Section Basics */
+.accordion-section {
+    padding: 0 4rem 6rem 4rem;
+}
+
+.accordion-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 2.5rem 0;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+.accordion-header:hover .acc-title {
+    color: var(--accent-gold);
+}
+
+.acc-num {
+    font-size: 0.9rem;
+    color: var(--accent-gold);
+    width: 3rem;
+    font-weight: 500;
+}
+
+.acc-title {
+    font-family: var(--font-serif);
+    font-size: 1.85rem;
+    font-weight: 400;
+    flex-grow: 1;
+    transition: color 0.3s ease;
+}
+
+.acc-icon {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    transition: transform 0.3s ease;
+}
+
+/* Accordion Open/Close Layout Mechanics */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.accordion-body {
+    padding: 0 0 3rem 3rem;
+    max-width: 800px;
+}
+
+.accordion-body p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+/* Class active triggered via JavaScript hooks */
+.accordion-item.active .accordion-content {
+    max-height: 350px; /* Gives plenty of space for expanding text blocks */
+}
+
+/* Services Packages Cards Grid Layout */
+.services-cards-section {
+    background-color: #fcfcfb;
+    padding: 8rem 4rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.cards-title {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.cards-title h2 {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.cards-title p {
+    color: var(--text-muted);
+}
+
+.services-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.s-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.s-card:hover {
+    border-color: var(--text-main);
+    transform: translateY(-4px);
+}
+
+.s-card.high-card {
+    border-color: var(--accent-gold);
+}
+
+.s-card.php-s-card {
+    background-color: #f7f9fc;
+}
+
+.s-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-bottom: 0.75rem;
+}
+
+.s-price {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.s-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+/* Services Page Mobile Optimization Rules */
+@media (max-width: 768px) {
+    .accordion-section { padding: 0 2rem 4rem 2rem; }
+    .acc-title { font-size: 1.35rem; }
+    .accordion-body { padding: 0 0 2rem 1.5rem; }
+    .accordion-body p { font-size: 1rem; }
+    
+    .services-cards-section { padding: 4rem 2rem; }
+    .services-pricing-grid { grid-template-columns: 1fr; }
+}
+/* ==========================================================================
+   Global Layout Uniformity Overrides
+   ========================================================================== */
+
+.services-hero {
+    padding: 8rem 4rem 4rem 4rem;
+    max-width: 900px;
+    background-color: var(--bg-primary);
+}
+
+.services-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.services-hero .subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Base Formats for Buttons and Structural Links inside Tiers */
+.btn-primary {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--text-main);
+    color: var(--bg-primary);
+    border: 1px solid var(--text-main);
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--text-main);
+}
+/* ==========================================================================
+   Portfolio Page Layout Uniformity Overrides
+   ========================================================================== */
+
+.portfolio-hero {
+    padding: 8rem 4rem 4rem 4rem;
+    max-width: 900px;
+    background-color: var(--bg-primary);
+}
+
+.portfolio-hero h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-hero .subtitle {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.portfolio-grid-container {
+    background-color: var(--bg-primary);
+}
