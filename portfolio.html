@@ -22,17 +22,89 @@
         </nav>
     </header>
 
-    <section class="portfolio-hero">
+    <section class="portfolio-hero" style="padding-bottom: 2rem;">
         <h1>Selected Work</h1>
         <p class="subtitle">A showcase of custom-coded, high-performance digital architecture built for luxury brands and modern businesses.</p>
     </section>
 
-    <section class="portfolio-grid-container" style="padding-bottom: 12rem;">
-        </section>
+    <!-- INTERACTIVE PORTFOLIO SHOWCASE (Aligned to match services.html layout) -->
+    <section class="accordion-section" style="padding-top: 0;">
+        <div class="accordion-container">
+
+            <!-- Featured Project Intro Header (Forced Sharp White Text Visibility) -->
+           <div style="margin-bottom: 2.5rem; border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 2rem;">
+                <span class="badge" style="display: inline-block; margin-bottom: 0.75rem;">Featured Case Study</span>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin: 0 0 1rem 0; font-weight: 600; color: #000000 !important;">Verified Visionary</h2>
+                <p style="font-family: 'Inter', sans-serif; color: #000000 !important; font-size: 1.1rem; line-height: 1.6; max-width: 850px; margin: 0;">
+                    A premium, multi-page digital ecosystem custom-built for music creators, record labels, and audio engineers. Engineered with a striking twilight neon visual aesthetic, the platform unifies top-tier studio engineering services and cinematic campaign production under a single, highly responsive experience.
+                </p>
+            </div>
+
+            <!-- Dropdown Item 1 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span class="acc-num">01</span>
+                    <span class="acc-title">Project Purpose & Strategy</span>
+                    <span class="acc-icon">＋</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p>Acts as a centralized commercial hub for independent artists. It establishes deep confidence for booking high-ticket media suites and streamlines complex creative pipelines right on the web.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dropdown Item 2 -->
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span class="acc-num">02</span>
+                    <span class="acc-title">Integrated Studio Modules</span>
+                    <span class="acc-icon">＋</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p style="margin-bottom: 0.75rem;"><strong>Verified Sounds:</strong> High-end tracking and mixing layout blocks featuring an interactive, clean presentation of elite audio rosters.</p>
+                        <p style="margin-bottom: 0.75rem;"><strong>Verified Productions:</strong> Dedicated modules outlining commercial music video campaigns and multi-camera capture configurations.</p>
+                        <p><strong>Cross-Page Routing:</strong> Programmed with clean, cross-page redirection anchors pointing users directly back to the central intake system seamlessly.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Direct Link Button (High Contrast & Clickable) -->
+            <div style="margin-top: 3rem; padding-left: 0.5rem;">
+                <a href="https://aura-sites.github.io/verified-visionary/" target="_blank" rel="noopener noreferrer" class="btn-nav" style="text-decoration: none; display: inline-block; padding: 1rem 2.5rem; font-size: 0.95rem; letter-spacing: 0.05em; background-color: #ffffff; color: #000000; border-radius: 4px; font-weight: 500;">
+                    Launch Live Site →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="portfolio-grid-container" style="padding-bottom: 6rem;">
+    </section>
 
     <footer class="main-footer">
         <p>&copy; 2026 Aura Sites. Built cleanly using pure code arrays.</p>
     </footer>
 
+    <!-- GLOBAL ACCORDION SYSTEM SCRIPT CONTROLLER -->
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionItem = button.parentElement;
+                const isItemActive = accordionItem.classList.contains('active');
+                
+                document.querySelectorAll('.accordion-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.acc-icon').textContent = '＋';
+                });
+
+                if (!isItemActive) {
+                    accordionItem.classList.add('active');
+                    button.querySelector('.acc-icon').textContent = '－';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
